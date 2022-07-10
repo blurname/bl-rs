@@ -1,10 +1,10 @@
 fn main() {
-    add_zwsp(String::from("helloworld"));
+    add_zwsp(&String::from("helloworld"));
 }
-pub fn add_zwsp(name: String) {
+pub fn add_zwsp(name: &str) {
     // so many string concatenate ways, which should I choose
     //
-    // path1 
+    // path1
     let mut output = String::from("");
     for ch in name.chars() {
         output.push(ch);
@@ -12,10 +12,10 @@ pub fn add_zwsp(name: String) {
     }
 
     // path2
-    let mut output = String::from("");
-    for ch in name.chars() {
-        output.push_str(&(String::from(ch)+ &String::from('\u{200b}')));
-    }
+    // let mut output = String::from("");
+    // for ch in name.chars() {
+    //     output.push_str(&(String::from(ch) + &String::from('\u{200b}')));
+    // }
 
-    println!("{}",output)
+    println!("{}", output)
 }

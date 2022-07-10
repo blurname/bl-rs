@@ -1,2 +1,3 @@
 /target
-/hello-wasm/target
+/wasm/*/target
+/wasm/*/pkg
